@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="rizky14"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-30 05:13:23 PM"/>
+        <attribute name="created" value="cml6a3kxNDsxNDsyMDIxLTEwLTMwOzAyOjMxOjIzIFBNOzIwMzU="/>
+        <attribute name="edited" value="cml6a3kxNDsxNDsyMDIxLTEwLTMwOzA1OjEzOjIzIFBNOzM7MjE0OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan, jarak, kecepatan, waktu" type="Real" array="False" size=""/>
+            <output expression="&quot;1.Hitung Kecepatan&quot;" newline="True"/>
+            <output expression="&quot;2.Hitung Jarak&quot;" newline="True"/>
+            <output expression="&quot;3.Hitung waktu&quot;" newline="True"/>
+            <output expression="&quot;Masukan Pilihan :&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <output expression="&quot;Masukan Jarak :&quot;" newline="True"/>
+                    <input variable="jarak"/>
+                    <output expression="&quot;Masukan waktu :&quot;" newline="True"/>
+                    <input variable="waktu"/>
+                    <output expression="&quot;Kecepatan adalah :&quot; &amp;HitungKecepatan(jarak,waktu) &amp;&quot; km/jam&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilihan == 2">
+                <then>
+                    <output expression="&quot;Masukan kecepatan :&quot;" newline="True"/>
+                    <input variable="kecepatan"/>
+                    <output expression="&quot;Masukan waktu :&quot;" newline="True"/>
+                    <input variable="waktu"/>
+                    <output expression="&quot;Jarak adalah : &quot; &amp;HitungJarak(kecepatan,waktu) &amp;&quot; km&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilihan == 3">
+                <then>
+                    <output expression="&quot;Masukan Kecepatan :&quot;" newline="True"/>
+                    <input variable="kecepatan"/>
+                    <output expression="&quot;Masukan jarak :&quot;" newline="True"/>
+                    <input variable="jarak"/>
+                    <output expression="&quot;Waktu tempuh adalah : &quot; &amp;Hitungwaktu(kecepatan,jarak) &amp;&quot; jam&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Pilihan Invalid&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="HitungJarak" type="Integer" variable="jarak">
+        <parameters>
+            <parameter name="kecepatan" type="Integer" array="False"/>
+            <parameter name="waktu" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="jarak" type="Integer" array="False" size=""/>
+            <assign variable="jarak" expression="kecepatan * waktu"/>
+        </body>
+    </function>
+    <function name="HitungKecepatan" type="Integer" variable="kecepatan">
+        <parameters>
+            <parameter name="jarak" type="Integer" array="False"/>
+            <parameter name="waktu" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="kecepatan" type="Integer" array="False" size=""/>
+            <assign variable="kecepatan" expression="jarak / waktu"/>
+        </body>
+    </function>
+    <function name="HitungWaktu" type="Integer" variable="waktu">
+        <parameters>
+            <parameter name="kecepatan" type="Integer" array="False"/>
+            <parameter name="jarak" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="waktu" type="Integer" array="False" size=""/>
+            <assign variable="waktu" expression="kecepatan / jarak"/>
+        </body>
+    </function>
+</flowgorithm>

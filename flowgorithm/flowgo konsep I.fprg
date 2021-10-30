@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="rizky14"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-30 03:09:01 PM"/>
+        <attribute name="created" value="cml6a3kxNDsxNDsyMDIxLTEwLTMwOzAyOjMxOjIzIFBNOzIwMzU="/>
+        <attribute name="edited" value="cml6a3kxNDsxNDsyMDIxLTEwLTMwOzAzOjA5OjAxIFBNOzE7MjE0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan" type="Integer" array="False" size=""/>
+            <output expression="&quot;1.Berapa kecepatan rossi&quot;" newline="True"/>
+            <output expression="&quot;2.Jarak rumah pak jul ke kantor&quot;" newline="True"/>
+            <output expression="&quot;3.Waktu tempuh pak yunan&quot;" newline="True"/>
+            <output expression="&quot;Masukan Pilihan :&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <output expression="&quot;Kecepatan Rossi adalah :&quot; &amp;HitungKecepatan(700,5) &amp;&quot; km/jam&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilihan == 2">
+                <then>
+                    <output expression="&quot;Jarak rumah pak jul ke kantor adalah : &quot; &amp;HitungJarak(20,30) &amp;&quot; km&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilihan == 3">
+                <then>
+                    <output expression="&quot;Waktu tempuh yang dibutuhkan pak yunan adalah : &quot; &amp;Hitungwaktu(180,50) &amp;&quot; jam&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Pilihan Invalid&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="HitungJarak" type="Integer" variable="jarak">
+        <parameters>
+            <parameter name="kecepatan" type="Integer" array="False"/>
+            <parameter name="waktu" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="jarak" type="Integer" array="False" size=""/>
+            <assign variable="jarak" expression="kecepatan * waktu"/>
+        </body>
+    </function>
+    <function name="HitungKecepatan" type="Integer" variable="kecepatan">
+        <parameters>
+            <parameter name="jarak" type="Integer" array="False"/>
+            <parameter name="waktu" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="kecepatan" type="Integer" array="False" size=""/>
+            <assign variable="kecepatan" expression="jarak / waktu"/>
+        </body>
+    </function>
+    <function name="HitungWaktu" type="Integer" variable="waktu">
+        <parameters>
+            <parameter name="kecepatan" type="Integer" array="False"/>
+            <parameter name="jarak" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="waktu" type="Integer" array="False" size=""/>
+            <assign variable="waktu" expression="kecepatan / jarak"/>
+        </body>
+    </function>
+</flowgorithm>
